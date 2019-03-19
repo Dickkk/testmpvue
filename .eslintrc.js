@@ -31,7 +31,9 @@ module.exports = {
     "space-before-function-paren": [0, "always"],
     "quotes": ["error", "single"],
     "space-infix-ops": 0,
-    "no-console": ["off"]
+    "no-console": ["off"],
+    "key-spacing":0,
+    "space-before-blocks":0
   },
   globals: {
     App: true,

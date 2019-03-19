@@ -9,7 +9,7 @@
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
-	"appid": "touristappid",
+	"appid": "wx7d9c7d27845f9139",
 	"projectname": "myfirstmpvue",
 	"condition": {
 		"search": {

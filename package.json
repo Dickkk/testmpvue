@@ -82,6 +82,8 @@
     "webpack-dev-middleware-hard-disk": "^1.12.0",
     "webpack-merge": "^4.1.0",
     "webpack": "^3.11.0",
+    "sass-loader": "^7.0.3",
+    "node-sass": "^4.9.2",
     "suitcss-utils-display": "^1.0.2",
     "suitcss-utils-text": "^1.0.0"
   },
