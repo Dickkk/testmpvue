@@ -1,12 +1,13 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/logs/main",
+    "pages/hold/main",
     "pages/counter/main",
-    "pages/prdtDetail/main"
+    "pages/prdtDetail/main",
+    "pages/prdtBuy/main"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "定期",
     "navigationBarTextStyle": "black",
@@ -25,7 +26,7 @@
       "selectedIconPath": "static/tabs/home-active.png"
     }, {
       "text": "持有",
-      "pagePath": "pages/logs/main",
+      "pagePath": "pages/hold/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
     }],
@@ -37,7 +38,7 @@
       "activeIcon": "static/tabs/home-active.png"
     }, {
       "name": "持有",
-      "pagePath": "pages/logs/main",
+      "pagePath": "pages/hold/main",
       "icon": "static/tabs/orders.png",
       "activeIcon": "static/tabs/orders-active.png"
     }],

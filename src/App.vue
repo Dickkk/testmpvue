@@ -87,5 +87,76 @@ export default {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
+.afterVerticalLine{
+  position: relative;
+}
+.afterVerticalLine:after{
+  position: absolute;
+  width: 1rpx;
+  height: 60%;
+  bottom:20rpx;
+  right:1rpx;
+  background-color: grey;
+  border-right: solid #F7F1F1 1rpx;
+  /* Line: */
+  opacity: 0.24;
+  content: ' ';
+}
+.afterVerticalLineWhite{
+  position: relative;
+}
+.afterVerticalLineWhite:after{
+  position: absolute;
+  width: 1rpx;
+  height: 60%;
+  bottom:20rpx;
+  right:1rpx;
+  background-color: grey;
+  border-right: solid #979797 1rpx;
+  /* Line: */
+  opacity: 0.24;
+  content: ' ';
+}
+.centerLayout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*行居中排布*/
+.flex-row{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column-around{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+.flex-column{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
 
+/*下方线*/
+.bottomLine{
+  position: relative;
+}
+.bottomLine:after{
+  /**line**/
+  content: '';
+  position: absolute;
+  width: 90vw;
+  height: 1rpx;
+  top: 100%;
+  margin-top: 15rpx;
+  opacity: 0.24;
+  left: 5vw;
+  background-image: linear-gradient(45deg, #a7a7a7, #a7a7a7);
+  background: #a7a7a7;
+  background-repeat: repeat-y;
+  flex:0;
+}
 </style>

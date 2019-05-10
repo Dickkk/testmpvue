@@ -22,27 +22,22 @@
       热门推荐
     </div>
 
-    <scroll-view
-      scroll-y
-      style="height: 200px;"
-      @scrolltoupper="upper"
-      @scrolltolower="lower"
-    >
-      <div  class="marketItem" v-for="prdt in prdts" :key="prdt.prdtId+prdt.prdtDate" @click="detailClick" >
-        <span>{{prdt.bankName}}|{{prdt.prdtTile}}}</span>
-        <div class="marketItemBody">
-          <div>
-            <span>{{prdt.prdtRate}}%</span>
-            <span>预期年化收益率</span>
-          </div>
-          <div> </div>
-          <div>
-            <span>{{prdt.prdtLong}}天</span>
-            <span>{{prdt.tag}}</span>
-          </div>
+
+    <div  class="marketItem" v-for="prdt in prdts" :key="prdt.prdtId+prdt.prdtDate" @click="detailClick" >
+      <span>{{prdt.bankName}}|{{prdt.prdtTile}}</span>
+      <div class="marketItemBody">
+        <div>
+          <span>{{prdt.prdtRate}}%</span>
+          <span>预期年化收益率</span>
+        </div>
+        <div> </div>
+        <div>
+          <span>{{prdt.prdtLong}}天</span>
+          <span>{{prdt.tag}}</span>
         </div>
       </div>
-    </scroll-view>
+    </div>
+
 
   </div>
 </template>
@@ -71,7 +66,20 @@ export default {
   mounted() {
     console.log(this.$store.state.prdtList.prdts);
   },
-
+  onPullDownRefresh(){
+    // 显示顶部刷新图标
+    this.currentPage=1;
+    wx.showNavigationBarLoading();
+    setTimeout(function() {
+      wx.hideNavigationBarLoading();
+      // 停止下拉动作
+      wx.stopPullDownRefresh();
+    }, 2000);
+  },
+  onReachBottom(){
+    this.currentPage+=1;
+    this.$store.dispatch('prdtList/getmorePrdts', this.currentPage);
+  },
   methods: {
 
     increse() {
@@ -280,13 +288,15 @@ export default {
   .barheader{
     position: relative;
     text-indent: 1em;
+    padding: 40rpx;
+    background-color: #ffffff;
   }
   .barheader:before{
     content: '';
     position: absolute;
     width: 8rpx;
     height: 32rpx;
-    top: 16rpx;
+    top: 56rpx;
     left: 20rpx;
     background-image: linear-gradient(45deg, #0087ff, #3bc7ff);
     background: #28ABFF;

@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "产品详情"
+  "navigationBarTitleText": "产品详情",
+  "usingComponents": {
+    "i-button": "../../../static/iview/button/index",
+    "i-steps": "../../../static/iview/steps/index",
+    "i-step": "../../../static/iview/step/index",
+    "i-icon": "../../../static/iview/icon/index",
+    "ff-canvas": "../../../static/f2-canvas/f2-canvas"
+  }
 }

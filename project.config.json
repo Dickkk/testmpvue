@@ -2,14 +2,15 @@
 	"description": "项目配置文件。",
 	"setting": {
 		"urlCheck": true,
-		"es6": false,
+		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
-	"appid": "wx7d9c7d27845f9139",
+	"appid": "wxe15c00752c04a354",
 	"projectname": "myfirstmpvue",
 	"condition": {
 		"search": {
