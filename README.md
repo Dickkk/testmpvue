@@ -1,37 +1,19 @@
-# myfirstmpvue （test）
+# mpvue小程序demo （test）
 
-> A Mpvue project
+## 用到的组件
+> mpvue、iview、f2-canvas、vuex
 
-## Build Setup
+## 编译步骤
 
 ``` bash
-# 初始化项目
-vue init mpvue/mpvue-quickstart myproject
-cd myproject
-
-# 安装依赖
-yarn
-
-# 开发时构建
-npm dev
-
-# 打包构建
-npm build
-
-# 指定平台的开发时构建(微信、百度、头条、支付宝)
-çç
-npm dev:swan
-npm dev:tt
-npm dev:my
-
-# 指定平台的打包构建
-npm build:wx
-npm build:swan
-npm build:tt
-npm build:my
-
-# 生成 bundle 分析报告
-npm run build --report
+npm install
+npm run dev:wx
+小程序开发ide创建工程，目录指向dist目录。
+code & have fun
 ```
+## 线上版本
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+![image](./app/images/miniPro.png)
+
+
